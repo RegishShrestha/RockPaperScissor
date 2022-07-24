@@ -1,11 +1,18 @@
-#include<iostream.h>
-#include <cstdlib>
 
+#include<iostream>
+#include <cstdlib>
+#include<fstream>
 using namespace std;
+
 
 int main()
 {
-int counter;
+    int counter=0;
+    int highest_score;
+    
+    
+
+
 const char *rock = R"""(
     _______
 ---'   ____)
@@ -42,11 +49,13 @@ while(game_is_on){
     srand( time(NULL) ); //Randomize seed initialization
     int randNum = rand() % 3;//dd mm yyyy
     //int randNum=0;
-
+    cout<< randNum;
 
     int choice;
     cout<<"What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.";
     cin>>choice;
+        
+
 
     switch(choice){
         case 0:
@@ -99,8 +108,37 @@ while(game_is_on){
                 cout<<"computer chose"<<scissors;
                 cout<<"Draw!!";}
                 break;     
-    }
-    cout<<"Your point: "<<counter<<endl;
- }
- return 0;
+        }
+        cout<<"Your point: "<<counter<<endl;
+
+        //fix this
+        ifstream ifn;
+        ifn.open("data.txt");
+        ifn>>highest_score;
+        ifn.close();
+        cout<<"Highest point: "<<highest_score<<endl;
+        
+        if (counter>highest_score)
+        {
+            
+            ofstream ofn;
+            ofn.open("data.txt");
+            ofn<<counter;
+            ofn.close();
+        }
+
+        //fix this
+        // twhen the highest value is 0 there is a bug try it yourself
+        
+   }
+    // int n;
+    // char name[20];
+    // ofstream ofn;
+    // ofn.open("data.txt");
+    // cout<<"Enter n and name: ";
+    // cin>>n>>name;
+    // ofn<<n<<name;
+    
+   
+    return 0;
 }
