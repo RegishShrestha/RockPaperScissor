@@ -5,30 +5,13 @@ basically 0 represent rock,
           1 represent paper,
           2 represent scissor
 
-rock =
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___) 
 
 
-paper =
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
+![Screenshot from 2022-07-24 13-05-00](https://user-images.githubusercontent.com/87872185/180636787-60fd35f5-d359-4db6-b538-9de94176d9f8.png)
 
-
-scissors = 
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
+Done in collab with:
+Satish Maharjan 
+Nija Tandukar
+Nikhil Raimajhi
 
 The work is still in progress
